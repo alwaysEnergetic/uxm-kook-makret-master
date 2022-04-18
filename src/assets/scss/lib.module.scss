@@ -1,0 +1,8 @@
+/*
+  Include all the Vendor or 3rd party libraries in this file so it can compile to separate css file
+  Sometimes we include files from the assets directory but we want them to be under different css fiels 
+*/
+@import '~bootstrap/dist/css/bootstrap.css';
+// @import '~@fortawesome/fontawesome-free/css/all.min.css';
+@import '../fontawesome-pro-5.13.0-web/css/all.min.css';
+@import '~rc-pagination/assets/index.css';

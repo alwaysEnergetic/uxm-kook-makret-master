@@ -1,0 +1,482 @@
+html,
+body {
+	margin: 0;
+	height: 100%;
+	min-height: 100%;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	font-family: "Roboto", sans-serif;
+	// font-family: 'Nunito', sans-serif;
+
+	font-size: 14px;
+	color: #111;
+	-webkit-font-smoothing: antialiased;
+	// background-image: url('../images/bg.jpg');
+}
+
+a {
+	color: #1279c5;
+	&:hover {
+		color: #1c7fc7;
+	}
+}
+
+.fs-14 {
+	font-size: 14px;
+}
+
+.error {
+	color: red;
+	font-size: 14px;
+}
+
+.strike {
+	text-decoration: line-through;
+}
+
+#root {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+
+}
+#layout {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+
+	.main {
+		flex: 1;
+		padding: 50px 0;
+	}
+
+	.content-inner {
+		padding: 25px 25px 25px 25px;
+		min-height: 360px;
+		border-radius: 8px;
+		width: 100%;
+	}
+
+	&.center {
+		.main {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+	
+			.compHome {
+				width: 100%;
+			}
+		}
+	}
+
+	@media screen and (max-width: 767px) {
+		&.center {
+			.main {
+				// display: block;
+			}
+		}
+	}
+}
+
+/*
+ * Different Layouts Styling
+*/
+
+.layoutHome {
+	.main {
+		display: flex;
+		align-items: center;
+
+		.compHome {
+			width: 100%;
+		}
+	}
+}
+
+.logoSidebar {
+	padding: 10px;
+	background-color: #f0f2f5;
+	margin-bottom: 20px;
+	// border-bottom: 1px solid #ffb118;
+	height: 60px;
+	text-align: center;
+	
+	img {
+		// max-width: 100%;
+		height: 100%;
+    	width: auto;
+    	max-width: 100%;
+	}
+}
+
+
+/*
+ * Header Nav Bar
+*/
+.headerUser {
+	width: 100%;
+	height: 60px;
+	padding: 10px 15px;
+	background-color: #fff;
+
+	&_inner {
+		display: flex;
+		flex-direction: row;
+		height: 100%;
+		align-items: center;
+
+		.right {
+			margin-left: auto;
+		}
+
+		@media screen and (max-width: 576px) {
+			.left img {
+				max-width: 95px;
+			}
+		}
+	}
+
+	.imgLogo {
+		max-width: 200px;
+		max-height: 45px;
+	}
+
+	.logo {
+		display: inline-block;
+		width: 100px;
+		height: 50px;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+
+	.logoHeading {
+		font-size: 20px;
+		font-weight: bold;
+	}
+
+	.menutoggleBtn {
+		display: none;
+	}
+
+	&.event {
+		.imgLogo {
+			max-width: 200px;
+			max-height: 70px;
+		}
+	}
+
+	@media screen and (max-width: 992px) {
+		padding: 0 10px;
+
+		.menutoggleBtn {
+			display: inline-block;
+		}
+
+		.welcomeSpan span {
+			display: none;
+		}
+	}
+}
+
+footer {
+	font-size: 12px;
+	color: #666;
+	border-top: 1px solid #f5f5f5;
+	padding: 10px 20px;
+	width: 100%;
+	background: #fff;
+
+	.outer {
+		display: flex;
+		justify-content: space-between;
+		@media screen and (max-width: 600px) {
+			display: block;
+			.left {
+				text-align: center;
+			}
+			.right {
+				text-align: center;
+			}
+		}
+	}
+}
+
+/*
+  Add Divider (|) <span className="divider divider-vertical"></span>
+  Used Where: Footer
+*/
+.divider {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	color: rgba(0, 0, 0, 0.65);
+	font-size: 14px;
+	font-variant: tabular-nums;
+	line-height: 1.5;
+	list-style: none;
+	-webkit-font-feature-settings: "tnum";
+	font-feature-settings: "tnum";
+	background: #e8e8e8;
+
+	&-vertical {
+		position: relative;
+		top: -0.06em;
+		display: inline-block;
+		width: 1px;
+		height: 0.9em;
+		margin: 0 8px;
+		vertical-align: middle;
+	}
+}
+
+/* Other */
+.grecaptcha-badge {
+	display: none;
+}
+
+.b2b-button {
+	background-color: #92d04f;
+	color: #fff;
+	text-align: center;
+	padding: 0 15px;
+
+	&.style1 {
+		padding: 3px 15px;
+	}
+}
+
+/* Item Catalogue Pagination */
+.rc-pagination-item-active {
+	background-color: #1890ff;
+	border-color: #1890ff;
+}
+
+.rc-pagination-item-active a,
+.rc-pagination-item-active:hover a {
+	color: #fff !important;
+}
+
+// .rc-pagination-item-active:hover,
+// .rc-pagination-item-active:focus {
+// 	background-color: #1890ff;
+// 	border-color: #1890ff;
+// }
+
+.toast-top-right {
+	top: 50px !important;
+}
+
+.mw-300 {
+	max-width: 350px;
+}
+
+.mw-400 {
+	max-width: 400px;
+}
+
+.mw-700 {
+	max-width: 700px;
+}
+
+/* Bootstrap */
+.list-group {
+	&.hasRadio {
+		label {
+			margin-bottom: 0;
+			display: flex;
+			align-items: center;
+		}
+	}
+}
+.dropdown-item {
+	transition: none;
+}
+.dropdown-item.active, .dropdown-item:active,
+.dropdown-item:focus,
+.dropdown-item:hover {
+	// transition: none;
+	color: #fff;
+	text-decoration: none;
+	background-color: #5face8;
+}
+
+.dropdown-toggle:after {
+	display: none;
+}
+
+.btn-block {
+	width: 100%;
+}
+
+.btn-primary {
+	background-color: #4099de;
+	border-color: #4099de;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,.05);
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled).active, 
+.show > .btn-primary.dropdown-toggle {
+	background-color: #1279c5;
+	border-color: #1279c5;
+}
+
+.btn-outline-primary {
+	color: #4099de;
+	border-color: #4099de;
+}
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:not(:disabled):not(.disabled):active,
+.btn-outline-primary:not(:disabled):not(.disabled).active,
+.show > .btn-outline-primary.dropdown-toggle {
+	color: #fff;
+	background-color: #4099de;
+	border-color: #4099de;
+}
+
+.btn-warning {
+	background-color: #d88101;
+	border-color: #d88101;
+	color: #fff;
+	&:hover,
+	&:focus {
+		color: #fff;
+		background-color: #e48b09;
+		border-color: #e48b09;
+	}
+}
+
+
+.btn-gold {
+	background-color: #ffcf40;
+	border-color: #ffcf40;
+	color: #000;
+}
+
+.btn-gold:hover,
+.btn-gold:focus {
+	background-color: #fbc62a;
+	border-color: #fbc62a;
+	color: #000;
+}
+
+
+
+input,
+.form-control:focus {
+	box-shadow: none;
+}
+
+/* Used for Homepage Search Bar */
+.input-group > .custom-select:not(:last-child),
+.input-group > .form-control:not(:last-child) {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+/*
+	* Shared Bootsrap Modal Component
+ * Path: packages/shared/components/Modal.js
+*/
+.ModalComp {
+	.close {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		font-size: 14px;
+		font-weight: 400;
+		z-index: 999;
+	}
+}
+
+/*
+ * Loading or Loader Component
+ * Path: packages/shared/components/Loading.js
+*/
+.LoadingComp {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 999;
+
+	.overlay {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: rgba(255, 255, 255, 0.5);
+	}
+
+	.spinnerWrapper {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+	}
+
+	.spinner-border {
+		width: 40px;
+		height: 40px;
+		color: #529fd8;
+	}
+}
+
+/*
+ * All the React Hook Forms using this Styling
+*/
+.uform {
+	padding: 15px;
+	width: 100%;
+	max-width: 550px;
+
+	.heading {
+		margin-bottom: 20px;
+		font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    /* text-align: center; */
+    border-bottom: 1px solid #f0f2f5;
+    padding-bottom: 10px;
+	}
+
+	.error {
+		margin: 5px 0;
+	}
+
+	&-vertical {
+		.inner {
+			border-radius: 5px;
+		
+			margin: 0 auto;
+			padding: 15px;
+			// border: 1px solid #ccc;
+			background-color: #fff;
+			// box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+			border: 1px solid #e3e5e6;
+		}
+	}
+}
+
+.loginFooter {
+	display: flex;
+	justify-content: space-between;
+	font-size: 14px;
+	margin-top: 15px;
+
+	@media screen and (max-width: 767px) {
+		flex-direction: column;
+	}
+}

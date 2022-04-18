@@ -1,0 +1,552 @@
+/* 
+ * HOME PAGE 
+ * Path: packages/market/components/Home.js
+*/
+.HomeComp {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+
+	.searchBarWrapper {
+		.custom-select {
+			width: 170px;
+		}
+
+		.inputSearch {
+			width: 600px;
+		}
+
+		.btnSearch {
+			span {
+				display: none;
+			}
+		}
+	}
+
+	@media screen and (max-width: 767px) {
+		h2 {
+			font-size: 24px;
+			padding: 0 15px;
+		}
+		.searchBarWrapper {
+			width: 100%;
+			padding: 15px;
+			max-width: 500px;
+
+			> .input-group {
+				display: block;
+			}
+
+			.custom-select {
+				width: 100%;
+				margin-bottom: 10px;
+			}
+			.inputSearch {
+				width: 100%;
+				margin-bottom: 10px;
+			}
+
+			.btnSearch {
+				display: block;
+				width: 100%;
+				border-radius: 24px !important;
+				span {
+					display: inline;
+					margin-left: 10px;
+				}
+			}
+		}
+	}
+
+	.musicLaunchInfo {
+		font-size: 18px;
+		text-align: center;
+		margin-top: 20px;
+		padding: 0 15px;
+		.yellow {
+			color: #dfa719;
+			font-weight: 900;
+		}
+
+		.siteurl {
+			font-weight: 900;
+			color: #000;
+		}
+
+		.powered {
+			font-size: 15px;
+		}
+
+		&__inner {
+			max-width: 400px;
+			margin: 0 auto;
+		}
+	}
+}
+
+
+
+
+
+// ITEM RELATED CSS ==============================================================
+
+.blockInfo {
+	border: 1px solid #e5e5e5;
+	padding: 15px;
+	border-radius: 5px;
+	margin-bottom: 20px;
+}
+
+/*
+	* Item PriceBlock Components
+ * Path: packages/market/components/Item/PriceBlock.js
+*/
+.priceBlock {
+	margin-bottom: 5px;
+	// line-height: 100%;
+
+	.label {
+		font-size: 13px;
+    color: #4c4a4a;
+    // width: 145px;
+    display: inline-block;
+    text-align: right;
+    padding-right: 10px;
+	}
+
+	.value {
+		font-size: 14px;
+		font-weight: 500;
+	}
+
+	.price {
+		&.big {
+			.value {
+				font-size: 18px;
+				color: #CC051A;
+				font-weight: 500;
+			}
+		}
+	}
+}
+
+.Comp_OfferDescripton {
+	display: inline-block;
+	font-style: italic;
+	padding: 0 5px;
+	// margin-bottom: 10px;
+	background: #CC051A;
+	color: #fff;
+	margin-top: 5px;
+}
+
+.Comp_PpaPriceBlock {
+	margin-top: 5px;
+}
+
+.compBuyNowButton {
+	// .loginRegisterMessage {
+	// 	background: #ffcf40;
+  //   padding: 10px;
+	// 	text-align: center;
+	// 	.buynow {
+	// 		font-weight: bold;
+	// 		font-size: 16px;
+	// 	}
+	// }
+
+	.btn-buynow {
+		font-weight: bold;
+		font-size: 15px;
+		padding: 15px 10px;
+		.note {
+			font-size: 12px;
+		}
+	}
+}
+
+/*
+ * /catalogue page component
+*/
+.CatalogueComp {
+	.noSearchResultsWrapper {
+		padding: 20px 0;
+	}
+
+	.adbanner img {
+		max-width: 100%;
+	}
+
+	&.singleItem {
+		margin-top: 150px;
+	}
+}
+
+/*
+ * Item single page
+*/
+.itemAttribs {
+	// margin: 15px 0;
+	// padding: 15px 15px 0 15px;
+	padding-bottom: 0;
+	// border: 1px solid #e5e5e5;
+	// border-radius: 5px;
+		
+	.attrib {
+		border-bottom: 1px solid #e5e5e5;
+		// padding-bottom: 10px;
+		margin-bottom: 10px;
+
+		&:last-child {
+			border: none;
+		}
+	}
+	.name {
+		font-weight: bold;
+		font-size: 13px;
+	}
+
+}
+
+
+/*
+ * Skeleton Loading showing on Item Catalogue Page
+*/
+.ItemListSkeleton {
+	display: table;
+	width: 100%;
+	border: 1px solid #f2f2f2;
+	padding: 10px;
+	margin-bottom: 20px;
+
+	.skeleton-content {
+		display: table-cell;
+		width: 100%;
+		vertical-align: top;
+
+		.skeleton-title {
+			width: 100%;
+			height: 16px;
+			margin-top: 16px;
+			background: #f2f2f2;
+		}
+		.skeleton-title + .skeleton-paragraph {
+			margin-top: 24px;
+			padding-left: 0;
+		}
+		.skeleton-paragraph > li {
+			width: 100%;
+			height: 16px;
+			list-style: none;
+			background: #f2f2f2;
+		}
+		.skeleton-paragraph > li + li {
+			margin-top: 16px;
+		}
+	}
+}
+
+/*
+ * Property Block on Catalogue page
+*/
+
+
+.ItemListComp {
+	.blockProperty {
+		position: relative;
+		margin-bottom: 20px;
+		border: 1px solid #eae8e8;
+		padding: 15px;
+		display: flex;
+	
+		.debug {
+			background: #fdfdb3;
+			padding: 5px;
+			margin: 20px 0;
+		}
+	
+		.title {
+			font-size: 18px;
+		}
+	
+		.left {
+			width: 200px;
+			margin-right: 25px;
+			overflow: hidden;
+			height: 200px;
+	
+			.productImg {
+				max-width: 100%;
+				width: 100%;
+				height: 100%;
+				object-fit: contain;
+			}
+		}
+	
+		.right {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+		}
+	
+		.topWrapper {
+			flex: 1;
+		}
+	
+		.bottomWrapper {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			border-top: 1px solid #e6e5e5;
+			padding-top: 10px;
+			margin-top: 10px;
+		}
+	
+		@media screen and (max-width: 767px) {
+			display: block;
+	
+			.left {
+				text-align: center;
+				width: 100%;
+				margin-bottom: 20px;
+				.productImg {
+					object-fit: contain;
+				}
+			}
+		}
+	
+		@media screen and (max-width: 460px) {
+			padding: 0 0 20px 0;
+			border: none;
+			border-bottom: 1px solid #ccc;
+			margin-bottom: 40px;
+		}
+	}
+
+	&.vertical {
+		display: flex;
+		// justify-content: space-between;
+		flex-wrap: wrap;
+
+		.blockProperty {
+			width: 23%;
+			flex-direction: column;
+			margin-right: 20px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			.left {
+				margin: 0 0 20px;
+				width: auto;
+				height: auto;
+				text-align: center;
+
+				.productImg {
+					max-height: 100px;
+					height: auto;
+					width: auto;
+				}
+			}
+
+			.title {
+				font-size: 18px;
+			}
+
+			.shortDescription {
+				font-size: 13px;
+			}
+
+			.bottomWrapper {
+				flex-direction: column;
+				>div {
+					width: 100%;
+				}
+				.top {
+					margin-bottom: 10px;
+				}
+				.bottom {
+					// margin-top: 20px;
+					text-align: right;
+				}
+			}
+		}
+
+		@media screen and (max-width: 1200px) {
+			.blockProperty {
+				width: 32%;
+			}
+		}
+
+		@media screen and (max-width: 992px) {
+			.blockProperty {
+				width: 47%;
+			}
+		}
+
+		@media screen and (max-width: 767px) {
+			.blockProperty {
+				width: 100%;
+			}
+		}
+	}
+
+}
+
+.ItemPopularListComp {
+	margin-top: 60px;
+}
+
+/* ITEM SINGLE PAGE */
+
+.compItemCarouselBlock {
+	.imgBlock {
+		height: 300px;
+		text-align: center;
+		margin-bottom: 30px;
+		img {
+			// max-height: 500px;
+			max-width: 100%;
+			width: auto !important;
+			margin: 0 auto;
+			max-height: 100%;
+			cursor: zoom-in;
+		}
+	}
+
+	.imageList {
+		display: flex;
+    flex-wrap: wrap;
+		.imageWrap {
+			cursor: pointer;
+			padding: 3px;
+			background: #f5f5f5;
+			width: 70px;
+			height: 70px;
+			margin: 2px;
+			text-align: center;
+			img {
+				max-width: 100%;
+				max-height: 100%;
+			}
+
+			&:hover {
+				// background: #515151;
+				border:2px solid #515151;
+			}
+
+			&.active {
+				// background: #8ed240;
+				border:2px solid #8ed240;
+			}
+		}
+	}
+}
+
+.compItemTitleBlock {
+	border-bottom: 1px solid #e5e5e5;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+
+	.title {
+		font-size: 21px;
+    font-weight: normal;
+	}
+}
+
+.ItemSingleContainer {
+	padding: 15px;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.ItemSingleWrapper {
+	display: flex;
+	flex-wrap: wrap;
+
+	.carouselWrapper {
+		width: 30%;
+	}
+
+	.productWrapper {
+		flex: 1;
+		padding: 0 25px 15px 25px;
+		word-break: break-word;
+	}
+
+	.sidebar {
+		min-width: 250px;
+		max-width: 250px;
+	}
+
+	.shortDescription {
+	}
+
+	@media screen and (max-width: 992px) {
+		.carouselWrapper {
+			width: 100%;
+			margin-bottom: 50px;
+
+			.compItemCarouselBlock {
+				max-width: 400px;
+				margin: 0 auto;
+			}
+		}
+	}
+
+	@media screen and (max-width: 767px) {
+		flex-direction: column;
+
+		.productWrapper {
+			padding: 0;
+		}
+	}
+}
+
+
+// END ITEM RELATED CSS ==============================================================
+
+
+.OrderStatus {
+	.iconSuccess {
+		font-size: 60px;
+    color: #35b729;
+	}
+
+	.iconFailed {
+		font-size: 60px;
+		color: red;
+	}
+
+	h1 {
+		margin: 20px 0;
+	}
+
+	.message {
+		font-size: 16px;
+	}
+}
+
+.ShoppingAssistant {
+	background-color: #fff;
+
+	li {
+		margin-bottom: 5px;
+	}
+	
+
+	&.isSticky {
+		position: fixed;
+		top: -200px;
+		transition: top 600ms;
+		max-width: 250px;
+	}
+
+	&.scrollDown {
+		top: 10px;
+	}
+	
+}

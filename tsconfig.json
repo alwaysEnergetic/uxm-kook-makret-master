@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "esnext",
+    "lib": ["es2017", "es5", "es6", "dom"], 
+    "jsx": "react",
+    "sourceMap": false,
+    "outDir": "./built",
+    "strictPropertyInitialization": false,
+    "noImplicitThis": true,
+    "esModuleInterop": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node"
+  }
+}
